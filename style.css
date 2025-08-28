@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-body: #222;
+  --color-section: #3c3b3b;
+  
+
+  --color-text-light: #fff;
+  --color-text-dark: #000000;
+  --color-cell: #f38e8e;
+  --color-border-cell: #999;
+  --color-button-dark: #444;
+  --color-button-light:#ebebeb;
+  
+}
+
+h2{
+    color: rgb(2, 115, 21);
+}
+
+body {
+    background-color: var(--color-body);
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.user-accounts{
+    background-color: var(--color-section);
+    width: 20%;
+    height: 100%;
+}
+
+.main-content{
+    background-color: var(--color-section);
+    width: 60%;
+    height: 100%;
+}
+
+.music-section{
+    background-color: var(--color-section);
+    width: 20%;
+    height: 100%;
+}
+
