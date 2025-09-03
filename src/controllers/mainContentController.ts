@@ -18,8 +18,12 @@ export class MainContentController {
 
    
     public async loadAndDisplayPlaylists(playlists: Playlist[]): Promise<void> {
-        this.userPlaylists = playlists;
-        this.mainContentView.renderPlaylists(this.userPlaylists);
+        try {
+            const userPlaylists = await this.dataService.getPlaylists();
+            this.mainContentView.displayPlaylists(userPlaylists);
+        } catch (error) {
+            console.error('Failed to load playlists:', error);
+        }
     }
     
 
