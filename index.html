@@ -23,12 +23,14 @@
         </div>
 
         <div class="user-accounts">
-            <h2>Users</h2>
+            <h2 id="all-users-heading">Users</h2>
 
-            <h3>Jon kldjmkl</h3>
-            <h3>Jon kldjmkl</h3>
-            <h3>Jon kldjmkl</h3>
-            <h3>Jon kldjmkl</h3>
+            <h3>Jon Roul</h3>
+            <h3>Mery Pinkford</h3>
+            <h3>Jane Doe</h3>
+            <h3>Kol Woker</h3>
+
+            <div id="user-list" class="user-list"></div>
         </div>
     </div>
 
@@ -38,26 +40,26 @@
             <h2>My Playlists</h2>
             <button class="create-playlist-button">+</button>
         </div>
-        <div class="playlists"></div>
+        <div id="user-playlists" class="playlists"></div>
 
         <h2>Popular</h2>
         <div class="playlists-popular"></div>
 
         <div class="player">
             <div class="player__buttons">
-                <button class="back-button">
+                <button id="back-button" class="back-button">
                     <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16">
                         <path d="M13 2.5L5 7.042V2.5H2V13.5H5V8.958L13 13.5V2.5z"></path>
                     </svg>
                 </button>
 
-                <button class="play-button">
+                <button id="play-button" class="play-button">
                     <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16">
                         <path d="M3 3.016L12 8.016L3 13.016V3.016z"></path>
                     </svg>
                 </button>
 
-                <button class="next-button">
+                <button id="next-button" class="next-button">
                     <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16">
                         <path d="M3 2.5L11 7.042V2.5H14V13.5H11V8.958L3 13.5V2.5z"></path>
                     </svg>
@@ -65,7 +67,7 @@
             </div>
 
             <div class="player__line">
-                <audio class="audio">
+                <audio id="audio-player" class="audio">
                     <source src="song.mp3" type="audio/mpeg">
                 </audio>
             </div>
@@ -78,8 +80,8 @@
             <img src="accets/img/user-avatar.svg" alt="Icon" class="user-icon"> 
         </button>
         
-        <h2>Playlist #1</h2>
-        <div class="playlist__songs"></div>
+        <h2 id="review-title">Playlist #1</h2>
+        <div id="review-songs" class="playlist__songs"></div>
 
         <button class="add-song-button">Add song</button>
     </div>
