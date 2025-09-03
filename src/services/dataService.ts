@@ -34,47 +34,52 @@ export class DataService {
         }
     }
 
-    public async getUserPlaylists(userId: number): Promise<Playlist[]> {
-    try {
-        const response = await fetch(`${this.API_URL}/users/${userId}/playlists`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data: Playlist[] = await response.json();
-        return data;
-    } catch (error) {
-        console.error(`Error fetching playlists for user ${userId}:`, error);
-        throw error;
-    }
-}
-
-
-public async getPlaylistById(playlistId: number): Promise<Playlist> {
-    try {
-        const response = await fetch(`${this.API_URL}/playlists/${playlistId}`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data: Playlist = await response.json();
-        return data;
-    } catch (error) {
-        console.error(`Error fetching playlist with ID ${playlistId}:`, error);
-        throw error;
-    }
-}
-
-public async getPlaylistsByUserId(userId: number): Promise<Playlist[]> {
+    public async getPlaylists(): Promise<Playlist[]> {
         try {
-            const response = await fetch(`${this.API_URL}/users/${userId}/playlists`);
+            const response = await fetch(`${this.API_URL}/playlists`, {
+                credentials: 'include' 
+            });
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data: Playlist[] = await response.json();
             return data;
         } catch (error) {
-            console.error(`Failed to fetch playlists for user ${userId}:`, error);
+            console.error("Error fetching playlists:", error);
             throw error;
         }
     }
 
+    public async getPlaylistById(playlistId: string): Promise<Playlist> {
+        try {
+            const response = await fetch(`${this.API_URL}/playlists/${playlistId}`, {
+                credentials: 'include'
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data: Playlist = await response.json();
+            return data;
+        } catch (error) {
+            console.error(`Error fetching playlist with ID ${playlistId}:`, error);
+            throw error;
+        }
+    }
+
+
+    public async getSongs(): Promise<Song[]> {
+        try {
+            const response = await fetch(`${this.API_URL}/songs`, {
+                credentials: 'include'
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data: Song[] = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Error fetching songs:", error);
+            throw error;
+        }
+    }
 }
