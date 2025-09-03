@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="accets/img/logo-icon.svg" type="image/x-icon">
     <title>Music Manager</title>
 </head>
+
 <body>
     <div class="navigation">
         <h2>Home</h2>
@@ -44,9 +45,23 @@
 
         <div class="player">
             <div class="player__buttons">
-                <button class="back-button">back</button>
-                <button class="play-button">></button>
-                <button class="next-button">next</button>
+                <button class="back-button">
+                    <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16">
+                        <path d="M13 2.5L5 7.042V2.5H2V13.5H5V8.958L13 13.5V2.5z"></path>
+                    </svg>
+                </button>
+
+                <button class="play-button">
+                    <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16">
+                        <path d="M3 3.016L12 8.016L3 13.016V3.016z"></path>
+                    </svg>
+                </button>
+
+                <button class="next-button">
+                    <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16">
+                        <path d="M3 2.5L11 7.042V2.5H14V13.5H11V8.958L3 13.5V2.5z"></path>
+                    </svg>
+                </button>
             </div>
 
             <div class="player__line">
@@ -59,7 +74,9 @@
 
     
     <div class="playlist-review">
-        <button class="user-account">Acc</button>
+        <button class="user-account-button">
+            <img src="accets/img/user-avatar.svg" alt="Icon" class="user-icon"> 
+        </button>
         
         <h2>Playlist #1</h2>
         <div class="playlist__songs"></div>
