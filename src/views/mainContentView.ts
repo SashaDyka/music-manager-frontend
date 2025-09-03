@@ -38,4 +38,24 @@ export class MainContentView {
             }
         });
     }
+
+
+    public displayPlaylists(playlists: any[]): void {
+        const playlistContainer = document.getElementById('playlists-container');
+        if (!playlistContainer) return;
+
+        playlistContainer.innerHTML = '';
+
+        playlists.forEach(playlist => {
+            const playlistDiv = document.createElement('div');
+            playlistDiv.className = 'playlist-card';
+
+            playlistDiv.innerHTML = `
+                <h3>${playlist.title}</h3>
+                <p>${playlist.songs.length} songs</p>
+            `;
+
+            playlistContainer.appendChild(playlistDiv);
+        });
+    }
 }
